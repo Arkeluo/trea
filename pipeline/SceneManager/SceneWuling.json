@@ -1,0 +1,368 @@
+{
+    "__ScenePrivateMapAnyEnterMapWulingJingyuValley": {
+        "desc": "在任意地图界面，进入武陵-景玉谷地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapAny"
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingJingyuValleySuccess",
+            "__ScenePrivateMapOverviewEnterMapWulingJingyuValley",
+            "[JumpBack]__ScenePrivateMapAnyEnterMapOverview"
+        ]
+    },
+    "__ScenePrivateMapAnyEnterMapWulingWulingCity": {
+        "desc": "在任意地图界面，进入武陵-武陵城地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapAny"
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingWulingCitySuccess",
+            "__ScenePrivateMapOverviewEnterMapWulingWulingCity",
+            "[JumpBack]__ScenePrivateMapAnyEnterMapOverview"
+        ]
+    },
+    "__ScenePrivateMapAnyEnterMapWulingQingboStockade": {
+        "desc": "在任意地图界面，进入武陵-清波寨地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapAny"
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingQingboStockadeSuccess",
+            "__ScenePrivateMapOverviewEnterMapWulingQingboStockade",
+            "[JumpBack]__ScenePrivateMapAnyEnterMapOverview"
+        ]
+    },
+    "__ScenePrivateMapAnyEnterMapWulingMarkerStone": {
+        "desc": "在任意地图界面，进入武陵-首墩地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapAny"
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingMarkerStoneSuccess",
+            "__ScenePrivateMapOverviewEnterMapWulingMarkerStone",
+            "[JumpBack]__ScenePrivateMapAnyEnterMapOverview"
+        ]
+    },
+    "__ScenePrivateMapAnyEnterMapWulingJingyuValleySuccess": {
+        "desc": "在地图界面，成功进入武陵-景玉谷地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingJingyuValley"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "__ScenePrivateMapAnyEnterMapWulingWulingCitySuccess": {
+        "desc": "在地图界面，成功进入武陵-武陵城地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingWulingCity"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "__ScenePrivateMapAnyEnterMapWulingQingboStockadeSuccess": {
+        "desc": "在地图界面，成功进入武陵-清波寨地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingQingboStockade"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "__ScenePrivateMapAnyEnterMapWulingMarkerStoneSuccess": {
+        "desc": "在地图界面，成功进入武陵-首墩地图",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingMarkerStone"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0
+    },
+    "__ScenePrivateMapOverviewSwitchMapOverviewWuling": {
+        "desc": "在地图总览界面，切换到武陵总览界面",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    -450,
+                    -150,
+                    350,
+                    150
+                ],
+                "template": [
+                    "SceneManager/MapOverviewWulingNotChoose.png"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "action": {
+            "type": "Click"
+        },
+        "post_wait_freezes": 400
+    },
+    "__ScenePrivateMapOverviewEnterMapWulingJingyuValley": {
+        "desc": "在地图总览界面，进入武陵-景玉谷地图",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    -450,
+                    -150,
+                    350,
+                    150
+                ],
+                "template": [
+                    "SceneManager/MapOverviewWulingChoose.png",
+                    "SceneManager/MapOverviewWulingNotChoose.png"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "next": [
+            "[JumpBack]__ScenePrivateMapOverviewSwitchMapOverviewWuling",
+            "__ScenePrivateMapOverviewWulingEnterMapWulingJingyuValley"
+        ]
+    },
+    "__ScenePrivateMapOverviewEnterMapWulingWulingCity": {
+        "desc": "在地图总览界面，进入武陵-武陵城地图",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    -450,
+                    -150,
+                    350,
+                    150
+                ],
+                "template": [
+                    "SceneManager/MapOverviewWulingChoose.png",
+                    "SceneManager/MapOverviewWulingNotChoose.png"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "next": [
+            "[JumpBack]__ScenePrivateMapOverviewSwitchMapOverviewWuling",
+            "__ScenePrivateMapOverviewWulingEnterMapWulingWulingCity"
+        ]
+    },
+    "__ScenePrivateMapOverviewEnterMapWulingQingboStockade": {
+        "desc": "在地图总览界面，进入武陵-清波寨地图",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    -450,
+                    -150,
+                    350,
+                    150
+                ],
+                "template": [
+                    "SceneManager/MapOverviewWulingChoose.png",
+                    "SceneManager/MapOverviewWulingNotChoose.png"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "next": [
+            "[JumpBack]__ScenePrivateMapOverviewSwitchMapOverviewWuling",
+            "__ScenePrivateMapOverviewWulingEnterMapWulingQingboStockade"
+        ]
+    },
+    "__ScenePrivateMapOverviewEnterMapWulingMarkerStone": {
+        "desc": "在地图总览界面，进入武陵-首墩地图",
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "roi": [
+                    -450,
+                    -150,
+                    350,
+                    150
+                ],
+                "template": [
+                    "SceneManager/MapOverviewWulingChoose.png",
+                    "SceneManager/MapOverviewWulingNotChoose.png"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "next": [
+            "[JumpBack]__ScenePrivateMapOverviewSwitchMapOverviewWuling",
+            "__ScenePrivateMapOverviewWulingEnterMapWulingMarkerStone"
+        ]
+    },
+    "__ScenePrivateMapOverviewWulingEnterMapWulingJingyuValley": {
+        "desc": "在武陵总览界面，进入武陵-景玉谷地图",
+        "action": "Click",
+        "target": [
+            480,
+            450,
+            125,
+            80
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingJingyuValleySuccess"
+        ]
+    },
+    "__ScenePrivateMapOverviewWulingEnterMapWulingWulingCity": {
+        "desc": "在武陵总览界面，进入武陵-武陵城地图",
+        "action": "Click",
+        "target": [
+            510,
+            140,
+            130,
+            80
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingWulingCitySuccess"
+        ]
+    },
+    "__ScenePrivateMapOverviewWulingEnterMapWulingQingboStockade": {
+        "desc": "在武陵总览界面，进入武陵-清波寨地图",
+        "action": "Click",
+        "target": [
+            770,
+            360,
+            115,
+            55
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingQingboStockadeSuccess"
+        ]
+    },
+    "__ScenePrivateMapOverviewWulingEnterMapWulingMarkerStone": {
+        "desc": "在武陵总览界面，进入武陵-首墩地图",
+        "action": "Click",
+        "target": [
+            312,
+            393,
+            75,
+            57
+        ],
+        "next": [
+            "__ScenePrivateMapAnyEnterMapWulingMarkerStoneSuccess"
+        ]
+    },
+    "__ScenePrivateMapWulingJingyuValleyEnterWorldAnchor": {
+        "desc": "在武陵-景玉谷地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingJingyuValley"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack]__ScenePrivateMapFilterClear",
+            "[JumpBack]__ScenePrivateMapZoomOut",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep0Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep1Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep2Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep3Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep4Anchor"
+        ]
+    },
+    "__ScenePrivateMapWulingWulingCityEnterWorldAnchor": {
+        "desc": "在武陵-武陵城地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingWulingCity"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack]__ScenePrivateMapFilterClear",
+            "[JumpBack]__ScenePrivateMapZoomOut",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep0Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep1Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep2Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep3Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep4Anchor"
+        ]
+    },
+    "__ScenePrivateMapWulingMarkerStoneEnterWorldAnchor": {
+        "desc": "在武陵-首墩地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingMarkerStone"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack]__ScenePrivateMapFilterClear",
+            "[JumpBack]__ScenePrivateMapZoomOut",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep0Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep1Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep2Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep3Anchor",
+            "[JumpBack][Anchor]__ScenePrivateMapSwipeToStep4Anchor"
+        ]
+    },
+    "__ScenePrivateMapWulingJingyuValleyEnterWorldAnchorWithPick": {
+        "desc": "在武陵-景玉谷地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingJingyuValley"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack][Anchor]__ScenePrivateMapMapTrackerBigMapPickAnchor"
+        ]
+    },
+    "__ScenePrivateMapWulingWulingCityEnterWorldAnchorWithPick": {
+        "desc": "在武陵-武陵城地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingWulingCity"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack][Anchor]__ScenePrivateMapMapTrackerBigMapPickAnchor"
+        ]
+    },
+    "__ScenePrivateMapWulingQingboStockadeEnterWorldAnchorWithPick": {
+        "desc": "在武陵-清波寨地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingQingboStockade"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack][Anchor]__ScenePrivateMapMapTrackerBigMapPickAnchor"
+        ]
+    },
+    "__ScenePrivateMapWulingMarkerStoneEnterWorldAnchorWithPick": {
+        "desc": "在武陵-首墩地图界面，进入[锚点]大世界",
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingMarkerStone"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "__ScenePrivateMapTeleportSuccess",
+            "[JumpBack]__ScenePrivateMapLayerSwitchToMain",
+            "[JumpBack][Anchor]__ScenePrivateMapMapTrackerBigMapPickAnchor"
+        ]
+    }
+}
